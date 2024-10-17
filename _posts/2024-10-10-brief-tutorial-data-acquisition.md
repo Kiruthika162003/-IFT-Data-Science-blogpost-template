@@ -59,6 +59,10 @@ It constructs the `game_id` and the API URL using f-strings for easy formatting:
 game_id = f"{season}{game_type}{game_number}"
 url = f"https://api-web.nhle.com/v1/gamecenter/{game_id}/play-by-play"
 ```
+Here, we have to bear in mind the composition of the Game ID, which is composed of three sections:
+1. The starting year of the season (e.g., "2020" for the 2020-2021 season).
+2. The game type ("01" for pre-season, "02" for regular season, "03" for playoffs, and "04" for all-star games).
+3. The game number, which differs between regular season and playoff games.
 __Making the Request:__
 It uses `requests.get(url)` to send a GET request to the API endpoint:
 ```python
@@ -121,7 +125,7 @@ if __name__ == "__main__":
               else:
                   game_id_str = str(game_num).zfill(4)  # Zero-pad game number to 4 digits
 
-              data_folder = os.getenv("NHL_DATA_FOLDER", "./nhl_data")  # Default to local folder if env variable not set
+              data_folder = os.getenv("NHL_DATA_FOLDER", "/content/nhl_data")  # Default to local folder if env variable not set
               os.makedirs(data_folder, exist_ok=True)
 
               file_path = os.path.join(data_folder, f"game_{year + 1}_{game_type}_{game_id_str}.json")
@@ -137,7 +141,7 @@ if __name__ == "__main__":
                   save_data_to_file(data, file_path)
 ```
 __Setting up the Data Directory:__
-It gets the data folder path from the `NHL_DATA_FOLDER` environment variable or defaults to `"./nhl_data"`.  
+It gets the data folder path from the `NHL_DATA_FOLDER` environment variable or defaults to `"/content/nhl_data"`.  
 It creates the data directory if it doesn't exist using `os.makedirs(data_folder, exist_ok=True)`.
 ```
 ```
@@ -154,4 +158,3 @@ It checks if the file already exists at that path. If it does, it skips download
 __Fetching and Saving:__
 It calls `fetch_nhl_play_by_play_data` to get the data.
 It calls `save_data_to_file` to save the data if it was successfully fetched.
-```
