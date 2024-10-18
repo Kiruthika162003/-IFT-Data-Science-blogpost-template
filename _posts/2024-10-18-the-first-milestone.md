@@ -390,9 +390,11 @@ Moreover, the color difference (blue for shots and red for goals) makes it easy 
 
 ### Relationship between the distance a shot was taken and the chance it was a goal
 
-![Shot distance vs Chance of Goal  2018-2019](images\shot_distance_vs_chance_of goal_2018-2019.png)
-![Shot distance vs Chance of Goal  2019-2020](images\shot_distance_vs_chance_of goal_2019-2020.png)
-![Shot distance vs Chance of Goal  2020-2021](images\shot_distance_vs_chance_of goal_2020-2021.png)
+![Shot distance vs Chance of Goal 2018-2019](images/shot_distance_vs_chance_of_goal_2018-2019.png)
+
+![Shot distance vs Chance of Goal 2019-2020](images/shot_distance_vs_chance_of_goal_2019-2020.png)
+
+![Shot distance vs Chance of Goal 2020-2021](images/shot_distance_vs_chance_of_goal_2020-2021.png)
 
 ### The Relationship
 
