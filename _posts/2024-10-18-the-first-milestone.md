@@ -454,7 +454,7 @@ Takeaways:
 
 ##### Figure 3
 
-![Goal Outcome by Distance Range 2](\images\plot_shot_distance_vs_chance_of goal_2019-2020.png)
+![Goal Outcome by Distance Range 2](images/plot_shot_distance_vs_chance_of_goal_2019-2020.png)
 
 This plot displays the relationship between shot distance and goal outcome for the 2019-2020 season, using a hexbin plot. The x-axis represents shot distance from 0 to 200 feet, while the y-axis represents the goal outcome, where:
 
